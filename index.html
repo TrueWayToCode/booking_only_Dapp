@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Booking and Rating Page</title>
+</head>
+<body>
+
+  <div class="booking-container container">
+    <div class="post-service-container">
+      <h2>Post a New Service</h2>
+      <form id="postServiceForm">
+        <label for="serviceName">Service Name:</label>
+        <input type="text" id="serviceName" class="service-name" required>
+    
+        <!-- Add any other input fields relevant to the service -->
+    
+        <button type="submit" class="post-service-btn">Post Service</button>
+      </form>
+    </div>
+    
+    <h2>Book a Service</h2>
+
+    <div class="service-container">
+      <label for="serviceDropdown">Select a Service:</label>
+      <select id="serviceDropdown" class="service">
+        <option value="haircut">Haircut</option>
+        <option value="massage">Massage</option>
+        <option value="manicure">Manicure</option>
+        <option value="software">Software</option>
+        <!-- Add user-posted services dynamically -->
+      </select>
+    </div>
+
+    <div class="software-container" style="display:none;">
+      <h2>Software Service</h2>
+      <!-- Add elements related to software services here -->
+      <label for="softwareDetails">Enter Software Details:</label>
+      <input type="text" id="softwareDetails" class="software-details">
+
+      <label for="additionalComments">Additional Comments:</label>
+      <textarea id="additionalComments" class="additional-comments"></textarea>
+      <button class="delete-service-btn">Delete Service</button>
+    </div>
+    
+
+    <div class="payment-container">
+      <label for="paymentMethod">Select Payment Method:</label>
+      <select id="paymentMethod" class="payment-method">
+        <option value="creditCard">Credit Card</option>
+        <option value="cash">Cash</option>
+      </select>
+    </div>
+
+    <button class="book-btn">Book Now</button>
+  </div>
+  
+
+  <div class="rating-container container" style="display:none;">
+    <h2>Rate Your Experience</h2>
+    <label for="rating">Select a Rating:</label>
+    <select id="rating" class="rating">
+      <option value="5">5 - Excellent</option>
+      <option value="4">4 - Good</option>
+      <option value="3">3 - Average</option>
+      <option value="2">2 - Poor</option>
+      <option value="1">1 - Very Poor</option>
+    </select>
+
+    <button class="submit-rating-btn">Submit Rating</button>
+    <button class="back-btn">Back</button>
+  </div>
+
+  <div class="feedback-container container" style="display:none;">
+    <h2>Feedback Summary</h2>
+    <ul id="feedbackList"></ul>
+    <button class="view-reviews-btn">View Reviews</button>
+    <button class="view-booking-list-btn">View Booking List</button>
+  </div>
+
+  <div class="view-reviews-container container" style="display:none;">
+    <h2>Reviews</h2>
+    <ul id="reviewsList"></ul>
+    <button class="back-to-feedback-btn">Back to Feedback Summary</button>
+  </div>
+
+  <div class="view-booking-list-container container" style="display:none;">
+    <h2>Booking List</h2>
+    <ul id="bookingList"></ul>
+    <button class="back-to-feedback-btn">Back to Feedback Summary</button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
